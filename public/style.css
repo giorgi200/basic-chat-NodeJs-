@@ -40,7 +40,7 @@ h2{
 }
 
 #chat-window{
-    height: 400px;
+    height: 64vh;
     overflow: auto;
     background: rgba(249, 249, 249, .5);
     border-top-left-radius: 5px;
@@ -100,6 +100,7 @@ textarea{
     font-size: 16px;
     color:  #fff !important;
     outline:  none !important;
+    resize:  none;
 }
 
 button{

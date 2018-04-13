@@ -1,5 +1,5 @@
 
-var socket = io.connect('http://localhost:4000');
+var socket = io.connect('192.168.1.18:4000');
 
 // Query DOM
 let body = document.querySelector('body');
@@ -9,8 +9,6 @@ let user = document.getElementById('user');
 var message = document.getElementById('message');
 // მომხმარებლის სახელი
 var handle = document.querySelector('#me strong');
-// გასაგზავნი ღილაკი
-var btn = document.getElementById('send');
 // მიღებული მესიჯები
 var output = document.getElementById('output');
 // ფონის შესაცვლელი
@@ -70,14 +68,15 @@ send_url.addEventListener('click', function() {
 });
 
 // წერილის გაგზავნის ფუნქცია 
-btn.addEventListener('click', function() {
-    socket.emit('chat', {
-        message: message.value,
-        handle: handle.innerText
-    })
+message.addEventListener('keyup', function() {
+    if (event.keyCode == 13 ) {
+        socket.emit('chat', {
+            message: message.value,
+            handle: handle.innerText
+        })
 
-    message.value = "";
-
+        message.value = "";
+    }
 });
 // შეტყობინება 
 message.addEventListener('keyup', function() {

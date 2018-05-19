@@ -8,36 +8,29 @@
     <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="background:url(back.jpg);">
-    <h1 style="text-align:center;">Geolab Chat</h1>
-    <audio src="send.mp3" id="req"></audio>
+<body style="background:url(img/background.png);">
+
+    
+
+
     <div id="my-chat">
         <div id="chat-window">
             <div id="output"></div>
-            <div id="feedback"></div>
-        </div>
-        <textarea type="text" id="message" placeholder="Message"></textarea>
-    </div> 
-    <div id="online">
-        <h2>notifications</h2>
-        <ul id="now"></ul>
-    </div>
-    <div id="background">
-        <h2>ფონის შეცვლა</h2>
-        <div id="url" class="row">
-            <strong id="close-wall">X</strong>
-            <input type="text" placeholder="Enter Image URL" id="wall">
-            <button class="btn btn-success " id="su">დაყენება</button>
         </div>
     </div>
-    <div id="me" class="row">
-        <div id="user" style="background:url('avatar.png');"></div>
-        <strong></strong>
-        <button id="ch-w">შეცვლე ფონი</button>
+
+    <div id="chose">
+        <button id="p_input">input</button>
+        <button id="p_output">output</button>        
     </div>
+    <textarea type="text" id="message" placeholder="სახელი გვარი.."></textarea>
+    
+    <h1 class="len">0</h1>
+    
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>    
-    <script src="chat.js"></script>
+    <script src="js/chat.js"></script>
 </body>
 </html>

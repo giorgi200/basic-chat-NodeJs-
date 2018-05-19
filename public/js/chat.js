@@ -1,6 +1,6 @@
 var x = 0;
 var was = false;
-var socket = io.connect('192.68.1.17:4000');
+var socket = io.connect('localhost:4000');
 
 // Query DOM
 let body = document.querySelector('body');
@@ -92,9 +92,3 @@ socket.on('chat', function(data) {
     }
     x++;
 });
-
-var url = "../visitors.json";
-$.getJSON(url,
-    function(data){
-      console.log(data);
-    });
